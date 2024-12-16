@@ -1,41 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>finn2009</title>
-  <link />
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
 </head>
 <body>
-  <!-- your web page content goes here -->
-   <header>
-  <h1><span style="color: blue; font-weight: bold;">FinnNet</span></h1>
-  <nav>
-    <ul>
-      <li><a href="/dauwe">het verhaal van de week.</a></li>
-      <li><a href="/mr">beste docent</a></li>
-      <li><a href="/isselborgh">nieuws</a></li>
-    </ul>
-  </nav>
-</header>
-  <h2>wie ben ik?</h2>
-  <p> ik ben finn.<br>hier zijn wat dingen over mij.</p>
-  <ul>
-  <li>ik ben 15 jaar oud.</li>
-  <li>woon in nederland</li>
-  </ul>
-  <h2>wat zijn mijn Hobby's?</h2>
-  <ul>
-  <li>Computers>.</li>
-  <li>arduino.</li>
-  <li>muziek.</li>
-  <li>en server dingen. </li>
-  </ul>
 
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projects</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Timeline</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  </div>
+</div>
 
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">projects</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">timeline</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">contact</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+</nav>
 
-  <footer>
-  <p>&copy; FinnNet</p>
-</footer>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">intro</h1>
+      <p>Hallo, Ik ben finn. ik kom uit Groenlo, ben op het moment 15 jaar oud. Mijn hobbys zijn met electronica kunteselen, websites bouwen en server's beheeren. ik zit in het vierde jaar van het vmbo TL.</p>
+    </div>
+  
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">wat maak ik dan?</h1>
+      <p>Ik maak bijvoorbeeld van simulator systeemen to aan website zoals die je nu leest. ik doe dit met veel plezier en intersse.</p>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">waarom deze website?</h1>
+      <p>deze website is voor een opdracht voor school. ik vond dit de beste manier die bij mij past om de uit te beelden</p>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+   <!-- for future -->
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>End of the page</h4>
+    </div>
+
+   
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
 </body>
-</html
+</html>
